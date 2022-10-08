@@ -3,6 +3,7 @@ name: builder
 on:
   push:
     branches: [ latest ]
+    tags: [ '*' ]
 
 jobs:
   docker:
