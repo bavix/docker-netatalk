@@ -29,8 +29,11 @@ RUN \
     &&  apt-get --quiet --yes clean \
     && rm -rf /var/lib/apt/lists/*
 
+COPY docker-healthcheck.sh /docker-healthcheck.sh
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 COPY afp.conf /etc/netatalk/
+
+HEALTHCHECK CMD ["/docker-healthcheck.sh"]
 
 EXPOSE 548
 
