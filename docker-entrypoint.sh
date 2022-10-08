@@ -59,7 +59,7 @@ sed -i'' -e "s,%AFP_SPOTLIGHT%,${AFP_SPOTLIGHT:-},g" /etc/netatalk/afp.conf
 sed -i'' -e "s,%AFP_ZEROCONF%,${AFP_ZEROCONF:-},g" /etc/netatalk/afp.conf
 
 if [[ "${AFP_SIZE_LIMIT}" -ne 0 ]]; then
-  echo "\nvol size limit = ${AFP_SIZE_LIMIT}\n" >> /etc/netatalk/afp.conf
+  printf "\nvol size limit = ${AFP_SIZE_LIMIT}\n" >> /etc/netatalk/afp.conf
 fi
 
 # Start dbus
