@@ -29,7 +29,7 @@ RUN \
     && rm -rf /var/lib/apt/lists/*
 
 COPY docker-entrypoint.sh /docker-entrypoint.sh
-#COPY afp.conf /etc/netatalk/
+COPY afp.conf /etc/netatalk/
 
 EXPOSE 548
 
