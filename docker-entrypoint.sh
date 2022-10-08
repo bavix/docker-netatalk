@@ -58,7 +58,7 @@ sed -i'' -e "s,%AFP_NAME%,${AFP_NAME:-},g" /etc/netatalk/afp.conf
 sed -i'' -e "s,%AFP_SPOTLIGHT%,${AFP_SPOTLIGHT:-},g" /etc/netatalk/afp.conf
 sed -i'' -e "s,%AFP_ZEROCONF%,${AFP_ZEROCONF:-},g" /etc/netatalk/afp.conf
 
-if [[ -z "${AFP_SIZE_LIMIT}" ]]; then
+if [[ "${AFP_SIZE_LIMIT}" -ne 0 ]]; then
   echo "\nvol size limit = ${AFP_SIZE_LIMIT}\n" >> /etc/netatalk/afp.conf
 fi
 
