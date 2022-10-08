@@ -7,6 +7,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV AFP_SPOTLIGHT no
 ENV AFP_ZEROCONF no
 ENV AFP_NAME Netatalk-server
+ENV AFP_SIZE_LIMIT 0
 
 RUN \
     set -ex \
